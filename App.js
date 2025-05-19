@@ -10,8 +10,8 @@ const title = 'Grguera';
 
 export default function App() {
   return (
-    <SafeAreaView>
-      <StatusBar style="auto" />
+    <SafeAreaView style={styles.container}>
+      <StatusBar style="auto"/>
       <ImageBackground source={imageBackground} resizeMode='cover' style={styles.image}>
         <View style={styles.card}>
           <Card profile={profile} username={username} title={title}/>
@@ -22,7 +22,12 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1
+  },
   image: {
-    
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
   }
 });
