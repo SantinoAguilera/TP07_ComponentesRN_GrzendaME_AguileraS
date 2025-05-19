@@ -17,7 +17,7 @@ export default function App() {
       </ImageBackground>
     </SafeAreaView>
   );
-}
+} 
 
 const styles = StyleSheet.create({
   container: {
