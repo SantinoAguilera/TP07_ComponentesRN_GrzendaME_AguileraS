@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { ImageBackground, SafeAreaView, StyleSheet, Text, View } from 'react-native';
-import Card from './components/card';
+import Card from './components/card'; 
 
 const imageBackground = require('./assets/imageBackground.png');
 const profile = require('./assets/profile.png');
-const username = 'Sati';
-const title = 'Grguera';
+const username = 'Sati Grguera';
+const title = 'Backend Failure';
 
 
 export default function App() {
@@ -13,9 +13,7 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <StatusBar style="auto"/>
       <ImageBackground source={imageBackground} resizeMode='cover' style={styles.image}>
-        <View style={styles.card}>
-          <Card profile={profile} username={username} title={title}/>
-        </View>
+        <Card profile={profile} username={username} title={title}/>
       </ImageBackground>
     </SafeAreaView>
   );
