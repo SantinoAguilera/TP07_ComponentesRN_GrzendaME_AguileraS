@@ -4,29 +4,22 @@ import Card from './components/card';
 
 const imageBackground = require('./assets/imageBackground.png');
 const profile = require('./assets/profile.png');
-const username = 'Sati';
-const title = 'Grguera';
+const username = 'Sati Grguera';
+const title = 'Backend Failure';
 
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView>
       <StatusBar style="light" />
-      <ImageBackground source={imageBackground} resizeMode='cover' style={styles.image}>
-        <View style={styles.card}>
-          <Card profile={profile} username={username} title={title} />
-        </View>
-      </ImageBackground>
+      <ImageBackground source={imageBackground} resizeMode='cover' style={styles.image}></ImageBackground>
+      <Card profile={profile} username={username} title={title} />
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
   image: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
   }
