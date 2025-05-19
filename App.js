@@ -11,7 +11,7 @@ const title = 'Grguera';
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar style="auto" />
+      <StatusBar style="light" />
       <ImageBackground source={imageBackground} resizeMode='cover' style={styles.image}>
         <View style={styles.card}>
           <Card profile={profile} username={username} title={title} />
