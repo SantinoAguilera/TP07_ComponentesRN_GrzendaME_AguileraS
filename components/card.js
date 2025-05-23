@@ -1,11 +1,11 @@
 import { Image, StyleSheet, Text, View } from 'react-native';
 import InteractiveSection from './interactiveSection';
 
-export default function Card({profile, username, title}) {
-    
+export default function Card({ profile, username, title }) {
+
     return (
         <View style={styles.card}>
-            <Image style={styles.image} source={profile} resizeMode='cover'/>
+            <Image style={styles.image} source={profile} resizeMode='cover' />
             <Text style={styles.username}>{username}</Text>
             <Text style={styles.title}>{title}</Text>
             <InteractiveSection />
@@ -15,9 +15,10 @@ export default function Card({profile, username, title}) {
 
 const styles = StyleSheet.create({
     card: {
-        flex: 1,
         borderRadius: 50,
-        backgroundColor: '#eeeeee',
+        width: 300,
+        height: 450,
+        backgroundColor: '#fff',
         justifyContent: 'center',
         alignItems: 'center'
     },
