@@ -1,4 +1,5 @@
 import { Image, StyleSheet, Text, View } from 'react-native';
+import InteractiveSection from './interactiveSection';
 
 export default function Card({profile, username, title}) {
     
@@ -7,6 +8,7 @@ export default function Card({profile, username, title}) {
             <Image style={styles.image} source={profile} resizeMode='cover'/>
             <Text style={styles.username}>{username}</Text>
             <Text style={styles.title}>{title}</Text>
+            <InteractiveSection />
         </View>
     )
 }
