@@ -12,7 +12,7 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="light" />
-      <ImageBackground source={imageBackground} style={styles.image}>
+      <ImageBackground source={imageBackground} style={styles.image} resizeMode='cover'>
         <Card profile={profile} username={username} title={title} />
       </ImageBackground>
     </SafeAreaView>
@@ -26,6 +26,8 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
+    width: "100%",
+    height: "100%",
     justifyContent: 'center',
     alignItems: 'center'
   }
