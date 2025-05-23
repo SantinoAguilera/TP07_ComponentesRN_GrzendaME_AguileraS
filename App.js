@@ -10,16 +10,22 @@ const title = 'Backend Failure';
 
 export default function App() {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <StatusBar style="light" />
-      <ImageBackground source={imageBackground} resizeMode='cover' style={styles.image}></ImageBackground>
-      <Card profile={profile} username={username} title={title} />
+      <ImageBackground source={imageBackground} style={styles.image}>
+        <Card profile={profile} username={username} title={title} />
+      </ImageBackground>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    display: 'flex'
+  },
   image: {
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
   }

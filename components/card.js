@@ -13,12 +13,9 @@ export default function Card({ profile, username, title }) {
 
 const styles = StyleSheet.create({
     card: {
-        flex: 1,
         borderRadius: 50,
         width: 300,
-        height: 400,
-        marginTop: 150,
-        marginBottom: 150,
+        height: 450,
         backgroundColor: '#eeeeee',
         justifyContent: 'center',
         alignItems: 'center'
