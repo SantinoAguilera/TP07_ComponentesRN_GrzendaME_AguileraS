@@ -6,7 +6,7 @@ export default function InteractiveSection() {
         alert(document.getElementById('text').value)
     }
     const verPerfil = () => {
-        document.getElementById('text').color = red; //Mati despues arregla esto.
+        document.getElementById('text').color = red; //Mati despues arregla esto. Tambien queda por hacer la ultima parte del punto 2.
     }
     return (
         <View>
