@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { TextInput } from 'react-native-web';
 
 export default function Contact() {
@@ -30,7 +30,8 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         padding: 8,
         borderColor: 'black',
-        borderWidth: 1
+        borderWidth: 1,
+        marginTop: 5
     },
     button: {
         justifyContent: 'center',
@@ -38,6 +39,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         padding: 8,
         borderColor: 'black',
-        borderWidth: 1
+        borderWidth: 1,
+        marginTop: 5
     }
 })

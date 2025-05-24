@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { Pressable, Image, StyleSheet, Text, View } from 'react-native';
 import Contact from './contact';
 
 export default function Card({ profile, username, title }) {
@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         padding: 8,
         borderColor: 'black',
-        borderWidth: 1
+        borderWidth: 1,
+        marginTop: 5
     }
 });
