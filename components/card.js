@@ -3,23 +3,20 @@ import { Pressable, Image, StyleSheet, Text, View } from 'react-native';
 import Contact from './contact';
 
 export default function Card({ profile, username, title }) {
-    const [color, setColor] = useState("fff");
+    const [background, setBackground] = useState(false);
 
-    const verPerfil = () => {
-        if (color == "fff") setColor("66ff66");
-        else setColor("fff");
-    }
+    const verPerfil = () => setBackground(!background);
 
     return (
-        <View style={styles.card(color)}>
+        <View style={styles.card(background)}>
             <Image style={styles.image} source={profile} resizeMode='cover' />
             <Text style={styles.username}>{username}</Text>
             <Text style={styles.title}>{title}</Text>
             <Pressable onPress={verPerfil} style={({ pressed }) => [
                 {
                     backgroundColor: pressed
-                        ? "aaaaff"
-                        : "white"
+                        ? "#ddf"
+                        : "#eee"
                 },
                 styles.pressable
             ]}><Text>Ver Perfil</Text></Pressable>
@@ -29,13 +26,17 @@ export default function Card({ profile, username, title }) {
 }
 
 const styles = StyleSheet.create({
-    card: (color) => ({
-        borderRadius: 50,
-        width: 300,
-        height: 450,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: color
+    card: ((background) => {
+        const color = background ? '#6f6' : '#fff';
+
+        return {
+            borderRadius: 50,
+            width: 300,
+            height: 450,
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: color
+        }
     }),
     image: {
         borderRadius: 200,
@@ -56,10 +57,10 @@ const styles = StyleSheet.create({
     pressable: {
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: 8,
-        padding: 8,
-        borderColor: 'black',
+        borderRadius: 15,
         borderWidth: 1,
-        marginTop: 5
+        borderColor: "#ccc",
+        padding: 10,
+        marginTop: 15
     }
 });
