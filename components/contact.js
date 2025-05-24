@@ -24,7 +24,8 @@ const styles = StyleSheet.create({
         borderColor: '#ccc',
         borderWidth: 1,
         backgroundColor: "#eee",
-        marginTop: 5
+        marginTop: 5,
+        width: 250
     },
     button: {
         justifyContent: 'center',
@@ -34,6 +35,7 @@ const styles = StyleSheet.create({
         borderColor: '#ccc',
         borderWidth: 1,
         backgroundColor: "#eee",
-        marginTop: 5
+        marginTop: 5,
+        width: 250
     }
 })
