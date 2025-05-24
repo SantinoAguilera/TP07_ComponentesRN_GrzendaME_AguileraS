@@ -1,27 +1,42 @@
+import { useState } from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
-import InteractiveSection from './interactiveSection';
+import Contact from './contact';
 
 export default function Card({ profile, username, title }) {
+    const [color, setColor] = useState("fff");
+
+    const verPerfil = () => {
+        if (color == "fff") setColor("66ff66");
+        else setColor("fff");
+    }
 
     return (
-        <View style={styles.card}>
+        <View style={styles.card(color)}>
             <Image style={styles.image} source={profile} resizeMode='cover' />
             <Text style={styles.username}>{username}</Text>
             <Text style={styles.title}>{title}</Text>
-            <InteractiveSection />
+            <Pressable onPress={verPerfil} style={({ pressed }) => [
+                {
+                    backgroundColor: pressed
+                        ? "aaaaff"
+                        : "white"
+                },
+                styles.pressable
+            ]}><Text>Ver Perfil</Text></Pressable>
+            <Contact />
         </View>
     )
 }
 
 const styles = StyleSheet.create({
-    card: {
+    card: (color) => ({
         borderRadius: 50,
         width: 300,
         height: 450,
-        backgroundColor: '#fff',
         justifyContent: 'center',
-        alignItems: 'center'
-    },
+        alignItems: 'center',
+        backgroundColor: color
+    }),
     image: {
         borderRadius: 200,
         width: 200,
@@ -37,5 +52,13 @@ const styles = StyleSheet.create({
     title: {
         fontStyle: 'italic',
         fontSize: 14
+    },
+    pressable: {
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 8,
+        padding: 8,
+        borderColor: 'black',
+        borderWidth: 1
     }
 });
