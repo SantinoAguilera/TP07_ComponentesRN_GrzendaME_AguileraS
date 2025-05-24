@@ -11,13 +11,13 @@ const title = 'Backend Failure';
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
       <ImageBackground source={imageBackground} style={styles.image} resizeMode='cover'>
         <Card profile={profile} username={username} title={title} />
       </ImageBackground>
     </SafeAreaView>
   );
-} 
+}
 
 const styles = StyleSheet.create({
   container: {
